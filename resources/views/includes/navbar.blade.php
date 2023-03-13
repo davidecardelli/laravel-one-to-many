@@ -54,7 +54,7 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item text-uppercase fw-bold"
-                                href="{{ route('admin.projects.index') }}">{{ __('Project') }}</a>
+                                href="{{ route('admin.home') }}">{{ __('Dashboard') }}</a>
                             <a class="dropdown-item text-uppercase fw-bold"
                                 href="{{ url('profile') }}">{{ __('Profile') }}</a>
                             <a class="dropdown-item text-uppercase fw-bold" href="{{ route('logout') }}"
