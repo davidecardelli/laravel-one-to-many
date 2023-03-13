@@ -46,12 +46,26 @@
 </div>
 
 
-<div class="row row-cols-1">
+<div class="row row-cols-2">
     <div class="col">
         {{-- Description --}}
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <textarea class="form-control" id="description" name="description" rows="3" placeholder="Description">{{ old('description', $project->description) }}</textarea>
+        </div>
+    </div>
+    <div class="col">
+        {{-- Type --}}
+        <div class="mb-3">
+            <label for="type_id" class="form-label">Type</label>
+            <select class="form-control" id="type_id" name="type_id">
+                <option value="">Nessun tipo</option>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}" @if ($project->type_id == $type->id) selected @endif>
+                        {{ $type->type }}
+                    </option>
+                @endforeach
+            </select>
         </div>
     </div>
 </div>
